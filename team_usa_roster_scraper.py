@@ -34,5 +34,3 @@ with open('team_usa_roster_2024_olympics.csv', 'w', newline='') as file:
                     name = athlete.text
                     writer.writerow([name, sport, gender])
             sibling = sibling.find_next_sibling()
-
-print("Data has been scraped and saved to athletes.csv")
