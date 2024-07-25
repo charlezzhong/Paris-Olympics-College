@@ -5,6 +5,7 @@ import AthleteDetails from './AthleteDetails';
 import './App.css';
 
 const App = () => {
+  console.log('App is rendering');
   return (
     <Router>
       <Routes>

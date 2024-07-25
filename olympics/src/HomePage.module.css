@@ -1,38 +1,54 @@
-/* Styles for the HomePage container */
 .homePage {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.olympicImage {
+  width: 200px; /* Adjust based on actual size */
+  height: auto;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.featuredAthlete {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.featuredImage {
+  max-width: 300px; /* Adjust based on actual size */
+  height: auto;
+  border-radius: 10px;
+}
+
+.searchAndFilters {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .searchAndFilters {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    background-color: #f0f2f5; /* Light gray background */
   }
-  
-  /* Banner with images */
-  .banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .olympicImage {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Container for search and filters */
-  .searchArea {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  @media (min-width: 768px) {
-    .searchArea {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+}

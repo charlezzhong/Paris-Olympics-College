@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +35,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+*/
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+  font-family: 'Arial', sans-serif; /* Provides a clean, readable typeface */
+  background-color: #f0f2f5; /* Light gray background color */
+  color: #333; /* Dark gray color for text for better readability */
+  line-height: 1.6; /* Ensures text is well-spaced */
+}
+
+/* Main container for the app, ensuring it centers content */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Basic styles for headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #212529; /* Slightly darker shade of gray for headers */
+}
+
+/* Links styling */
+a {
+  color: #007bff; /* Bootstrap's default blue for links */
+  text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Adds underline on hover for better interaction feedback */
+}
+
+/* Ensures adequate spacing between sections */
+section {
+  margin-top: 20px;
+}
+
+/* Button styling for consistency */
+button {
+  background-color: #007bff; /* Blue background making buttons stand out */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer; /* Indicates clickable button */
+  font-size: 16px; /* Readable font size */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
 }
