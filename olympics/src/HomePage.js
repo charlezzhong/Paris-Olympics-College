@@ -3,8 +3,7 @@ import SearchBar from './SearchBar';
 import Filters from './Filters';
 import Results from './Results';
 import styles from './HomePage.module.css';
-import olympicImage from './olympics_ring.png';
-import mainFeature from './usain_bolt.jpeg';
+import boltImage from './main.png'; // Ensure this import points to the correct file path
 
 const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,11 +19,8 @@ const HomePage = () => {
   return (
     <div className={styles.homePage}>
       <div className={styles.banner}>
-        <img src={olympicImage} alt="Olympic Games" className={styles.olympicImage} />
-        <h1 className={styles.title}>NCAA Athletes Competing in Paris Olympics</h1>
-      </div>
-      <div className={styles.featuredAthlete}>
-        <img src={mainFeature} alt="Featured Athlete" className={styles.featuredImage} />
+        <img src={boltImage} alt="Usain Bolt Celebration" className={styles.bannerImage} />
+        <h1 className={styles.bannerTitle}>NCAA Athletes Competing in Paris Olympics</h1>
       </div>
       <div className={styles.searchAndFilters}>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
