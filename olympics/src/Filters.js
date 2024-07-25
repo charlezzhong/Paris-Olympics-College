@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Filters.module.css';
 
 const Filters = ({ filters, setFilters }) => {
   const handleChange = (e) => {
@@ -9,8 +10,8 @@ const Filters = ({ filters, setFilters }) => {
   };
 
   return (
-    <div>
-      <select name="sport" value={filters.sport} onChange={handleChange}>
+    <div className={styles.filterContainer}>
+      <select name="sport" value={filters.sport} onChange={handleChange} className={styles.filterSelect}>
         <option value="">Select Sport</option>
         <option value="basketball">Basketball</option>
         <option value="swimming">Swimming</option>
@@ -18,7 +19,7 @@ const Filters = ({ filters, setFilters }) => {
         <option value="gymnastics">Gymnastics</option>
         {/* Add more sports as needed */}
       </select>
-      <select name="country" value={filters.country} onChange={handleChange}>
+      <select name="country" value={filters.country} onChange={handleChange} className={styles.filterSelect}>
         <option value="">Select Country</option>
         <option value="USA">USA</option>
         <option value="Canada">Canada</option>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styles from './AthleteDetails.module.css';
 
 const AthleteDetails = ({ match }) => {
   const [athlete, setAthlete] = useState(null);
@@ -18,7 +19,7 @@ const AthleteDetails = ({ match }) => {
   }
 
   return (
-    <div>
+    <div className={styles.details}>
       <h1>{athlete.name}</h1>
       <p>Sport: {athlete.sport}</p>
       <p>College: {athlete.college}</p>

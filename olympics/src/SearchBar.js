@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './SearchBar.module.css';
 
 const SearchBar = ({ searchTerm, setSearchTerm }) => {
   return (
@@ -7,6 +8,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       placeholder="Enter college name"
+      className={styles.searchInput}
     />
   );
 };
