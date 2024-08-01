@@ -7,52 +7,18 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
-
-class Athlete(models.Model):
-    id = models.AutoField(primary_key=True)
-    first_name = models.CharField(max_length=50, blank=True, null=True)
-    last_name = models.CharField(max_length=50, blank=True, null=True)
-    country_team = models.CharField(max_length=50, blank=True, null=True)
-    olympic_role = models.CharField(max_length=50, blank=True, null=True)
-
-    class Meta:
-        db_table = 'athletes'
-        ordering = ['id']
-
-class School(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255, unique=True)
+class Ultitable(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    school = models.CharField(max_length=255)
     conference = models.CharField(max_length=255)
-    division = models.CharField(max_length=50)
-
-    class Meta:
-        db_table = 'schools'
-        ordering = ['id']
-
-class Sport(models.Model):
-    id = models.AutoField(primary_key=True)
+    division = models.CharField(max_length=10)
     ncaa_sport = models.CharField(max_length=255)
     olympic_sport = models.CharField(max_length=255)
+    country_team = models.CharField(max_length=100)
+    olympic_role = models.CharField(max_length=100)
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
     class Meta:
-        db_table = 'sports'
-        unique_together = (('ncaa_sport', 'olympic_sport'),)
-        ordering = ['id']
-
-class AthleteSchool(models.Model):
-    athlete = models.ForeignKey(Athlete, on_delete=models.CASCADE)
-    school = models.ForeignKey(School, on_delete=models.CASCADE)
-
-    class Meta:
-        db_table = 'athlete_school'
-        unique_together = (('athlete', 'school'),)
-        ordering = ['athlete', 'school']
-
-class AthleteSport(models.Model):
-    athlete = models.ForeignKey(Athlete, on_delete=models.CASCADE)
-    sport = models.ForeignKey(Sport, on_delete=models.CASCADE)
-
-    class Meta:
-        db_table = 'athlete_sport'
-        unique_together = (('athlete', 'sport'),)
-        ordering = ['athlete', 'sport']
+        db_table = 'ultitable'  # Explicitly specify the table name
